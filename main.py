@@ -25,7 +25,7 @@ def upload_to_slack():
         response = slack_client.files_upload(
             channels='#security',
             file=filename)
-        assert response["file"]  # the uploaded file
+        assert response["file"] 
     except SlackApiError as e:
         print(f"Got an error: {e.response['error']}")
 
