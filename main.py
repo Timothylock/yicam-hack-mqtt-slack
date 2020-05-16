@@ -23,9 +23,9 @@ slack_client = WebClient(token=os.environ['SLACK_API_TOKEN'])
 def upload_to_slack():
     try:
         response = slack_client.files_upload(
-            channels='#security',
+            channels='#security_log',
             file=filename)
-        assert response["file"] 
+        assert response["file"]
     except SlackApiError as e:
         print(f"Got an error: {e.response['error']}")
 
